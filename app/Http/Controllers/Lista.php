@@ -11,8 +11,9 @@ class Lista extends Controller {
 public function goPage() {
 
       $cars = Car::all();
-      dump($cars);
-      return view('cars-list',['cars'=>$cars]);
+      $id = Car::where('id',1)->get();
+
+      return view('cars-list',['cars'=>$cars], ['id' =>$id]);
 
   }
 
