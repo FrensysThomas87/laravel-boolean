@@ -12,6 +12,7 @@ public function goPage() {
 
       $cars = Car::all();
       $id = Car::where('id',1)->get();
+      // $cambioTarga = Car::select('cambio','targa')->where('id',1)->get();
 
       return view('cars-list',['cars'=>$cars], ['id' =>$id]);
 
